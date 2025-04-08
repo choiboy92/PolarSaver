@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6102D4E02D845D0100891203 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 6102D4DF2D845D0100891203 /* Zip */; };
+		61AB8FA12DA5B776005C0A5E /* PolarBleSdk in Frameworks */ = {isa = PBXBuildFile; productRef = 61AB8FA02DA5B776005C0A5E /* PolarBleSdk */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		6102D4BA2D84373900891203 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +34,22 @@
 		6102D4C32D84373900891203 /* PolarSaverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarSaverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6102D4DD2D844FFE00891203 /* Exceptions for "PolarSaver" folder in "PolarSaver" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 6102D4A82D84373600891203 /* PolarSaver */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		6102D4AB2D84373600891203 /* PolarSaver */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6102D4DD2D844FFE00891203 /* Exceptions for "PolarSaver" folder in "PolarSaver" target */,
+			);
 			path = PolarSaver;
 			sourceTree = "<group>";
 		};
@@ -52,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61AB8FA12DA5B776005C0A5E /* PolarBleSdk in Frameworks */,
+				6102D4E02D845D0100891203 /* Zip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +98,7 @@
 				6102D4AB2D84373600891203 /* PolarSaver */,
 				6102D4BC2D84373900891203 /* PolarSaverTests */,
 				6102D4C62D84373900891203 /* PolarSaverUITests */,
+				6102D4E22D84613100891203 /* Frameworks */,
 				6102D4AA2D84373600891203 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +111,13 @@
 				6102D4C32D84373900891203 /* PolarSaverUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6102D4E22D84613100891203 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +140,8 @@
 			);
 			name = PolarSaver;
 			packageProductDependencies = (
+				6102D4DF2D845D0100891203 /* Zip */,
+				61AB8FA02DA5B776005C0A5E /* PolarBleSdk */,
 			);
 			productName = PolarSaver;
 			productReference = 6102D4A92D84373600891203 /* PolarSaver.app */;
@@ -195,6 +225,10 @@
 			);
 			mainGroup = 6102D4A02D84373600891203;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6102D4DE2D845D0100891203 /* XCRemoteSwiftPackageReference "Zip" */,
+				61AB8F9F2DA5B776005C0A5E /* XCRemoteSwiftPackageReference "polar-ble-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6102D4AA2D84373600891203 /* Products */;
 			projectDirPath = "";
@@ -396,8 +430,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PolarSaver/Preview Content\"";
+				DEVELOPMENT_TEAM = UB7ZKUP5F7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PolarSaver/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,8 +460,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PolarSaver/Preview Content\"";
+				DEVELOPMENT_TEAM = UB7ZKUP5F7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PolarSaver/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -552,6 +590,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6102D4DE2D845D0100891203 /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.2;
+			};
+		};
+		61AB8F9F2DA5B776005C0A5E /* XCRemoteSwiftPackageReference "polar-ble-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/polarofficial/polar-ble-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6102D4DF2D845D0100891203 /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6102D4DE2D845D0100891203 /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+		61AB8FA02DA5B776005C0A5E /* PolarBleSdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61AB8F9F2DA5B776005C0A5E /* XCRemoteSwiftPackageReference "polar-ble-sdk" */;
+			productName = PolarBleSdk;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6102D4A12D84373600891203 /* Project object */;
 }
